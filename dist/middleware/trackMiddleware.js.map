@@ -1,0 +1,1 @@
+{"version":3,"file":"trackMiddleware.js","sourceRoot":"","sources":["../../src/middleware/trackMiddleware.ts"],"names":[],"mappings":"AAEA,MAAM,CAAC,MAAM,eAAe,GAAG,CAC7B,GAAY,EACZ,GAAa,EACb,IAAkB,EAClB,EAAE;IACF,2CAA2C;IAC3C,OAAO,CAAC,GAAG,CAAC,2BAA2B,GAAG,CAAC,EAAE,EAAE,CAAC,CAAC;IACjD,IAAI,EAAE,CAAC;AACT,CAAC,CAAC"}

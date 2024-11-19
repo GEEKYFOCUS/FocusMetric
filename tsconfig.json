@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "ESNext", // Use ESNext for ES modules in Node.js
+    "moduleResolution": "Node",
+    "target": "ES2015",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "lib": ["ES2015"],
+    "strict": true,
+    "esModuleInterop": true,
+    // "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    // "allowJs": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "typeRoots": ["./node_modules/@types", "./types"]
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node",
+    "transpileOnly": true
+  },
+  "include": ["src/**/*", "types", "src/server.js"],
+  "exclude": ["node_modules"]
+}
