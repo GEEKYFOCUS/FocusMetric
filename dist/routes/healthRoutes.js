@@ -67,8 +67,7 @@
 // healthCheck.start();
 // export default healthCheck;
 import express from "express";
-import { healthCheck } from "../controllers/healthController";
+import { healthCheck } from "../controllers/healthController.js";
 const router = express.Router();
 router.get("/health", healthCheck);
 export default router;
-//# sourceMappingURL=healthRoutes.js.map

@@ -1,6 +1,6 @@
 import express from "express";
 import pkg from "lodash";
-import { getUserBySessionToken } from "../db/user";
+import { getUserBySessionToken } from "../db/user.js";
 const { merge, get } = pkg;
 
 export const isOwner = async (

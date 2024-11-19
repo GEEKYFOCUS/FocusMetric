@@ -1,5 +1,5 @@
 {
-  "watch": ["dist"],
+  "watch": ["src"],
   "ext": "ts,js",
-  "exec": "node --loader ts-node/esm  ./dist/server.ts"
+  "exec": "node --loader ts-node/esm  ./src/server.ts"
 }

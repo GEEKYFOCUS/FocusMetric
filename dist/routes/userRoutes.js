@@ -1,5 +1,5 @@
 import express from "express";
-import { signup, login, logout, forgotPassword, resetPassword, verifyUser, resendVerificationToken, updatePassword, } from "../controllers/authController";
+import { signup, login, logout, forgotPassword, resetPassword, verifyUser, resendVerificationToken, updatePassword, } from "../controllers/authController.js";
 // const userController = require("../controllers/userController");
 const router = express.Router();
 router.post("/signup", signup);
@@ -9,7 +9,7 @@ router.post("/forgotPassword", forgotPassword);
 router.post("/resetPassword/:token", resetPassword);
 router.get("/verifyUser/:token", verifyUser);
 router.post("/resendVerificationToken", resendVerificationToken);
-// router.use(protect);
+// router.use(protect);.js
 router.patch("/updatePassword", updatePassword);
 // router.get("/getMe", userController.getMe, userController.getUser);
 // router.patch(
@@ -30,4 +30,3 @@ router.patch("/updatePassword", updatePassword);
 //   .delete(userController.deleteUser)
 //   .get(userController.getUser);
 export default router;
-//# sourceMappingURL=userRoutes.js.map

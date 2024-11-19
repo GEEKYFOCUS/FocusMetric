@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 import dotenv from "dotenv";
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
-import { findOrCreateUser, findUserById } from "./controllers/authController";
+import { findOrCreateUser, findUserById } from "./controllers/authController.js";
 dotenv.config({
     path: "./config.env",
 });
@@ -46,4 +46,3 @@ passport.deserializeUser((id, done) => {
     findUserById(id).then((user) => done(null, user));
 });
 export default passport;
-//# sourceMappingURL=auth.js.map

@@ -2,12 +2,12 @@ import express, { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
 import { promisify } from "util";
-import catchAsync from "../utils/catchAsync";
-import Email from "../utils/email";
-import User from "../models/userModel";
-import { IUser } from "../models/userModel";
-import { HttpStatus } from "../helpers/httpsStatus";
-import AppError from "../utils/appError";
+import catchAsync from "../utils/catchAsync.js";
+import Email from "../utils/email.js";
+import User from "../models/userModel.js";
+import { IUser } from "../models/userModel.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
+import AppError from "../utils/appError.js";
 
 interface JwtPayload {
   id: string;

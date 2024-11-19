@@ -6,4 +6,3 @@
 //   router.post("/auth/register", registerUser);
 //   router.post("/auth/login", login);
 // };
-//# sourceMappingURL=authentication.js.map

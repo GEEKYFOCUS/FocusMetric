@@ -10,15 +10,15 @@ import xss from "xss-clean";
 import rateLimit from "express-rate-limit";
 import mongoSanitize from "express-mongo-sanitize";
 import session from "express-session";
-import passport from "./auth";
-import authRoutes from "./routes/authRoutes";
-import globalErrorHandler from "./controllers/errorController";
+import passport from "./auth.js";
 import MemoryStore from "memorystore";
-import AppError from "./utils/appError";
-import viewRouter from "./routes/viewRoutes";
-import urlRouter from "./routes/urlRoutes";
-import userRouter from "./routes/userRoutes";
-import healthRouter from "./routes/healthRoutes";
+import globalErrorHandler from "./controllers/errorController.js";
+import authRoutes from "./routes/authRoutes.js";
+import AppError from "./utils/appError.js";
+import viewRouter from "./routes/viewRoutes.js";
+import urlRouter from "./routes/urlRoutes.js";
+import userRouter from "./routes/userRoutes.js";
+import healthRouter from "./routes/healthRoutes.js";
 // Recreate __filename and __dirname
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -97,4 +97,3 @@ app.use("/api/v1/users", userRouter);
 app.use("*", (req, res, next) => next(new AppError(`Can't find ${req.originalUrl} on this server`, 404)));
 app.use(globalErrorHandler);
 export default app;
-//# sourceMappingURL=app.js.map

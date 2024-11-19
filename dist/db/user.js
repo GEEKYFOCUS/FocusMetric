@@ -38,4 +38,3 @@ export const getUserById = (id) => userModel.findById({ id });
 export const createUser = (values) => new userModel(values).save().then((user) => user.toObject());
 export const deleteUserById = (id) => userModel.findByIdAndDelete({ _id: id });
 export const updateUserById = (id, values) => userModel.findByIdAndUpdate(id, values);
-//# sourceMappingURL=user.js.map

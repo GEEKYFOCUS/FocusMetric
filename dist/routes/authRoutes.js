@@ -1,7 +1,7 @@
 import express from "express";
 import passport from "passport";
-import { createSendToken } from "../controllers/authController";
-import { HttpStatus } from "../helpers/httpsStatus";
+import { createSendToken } from "../controllers/authController.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
 const router = express.Router();
 // Start the Google OAuth flow
 router.get("/auth/google", passport.authenticate("google", {
@@ -18,4 +18,3 @@ router.get("/auth/google/callback", passport.authenticate("google", {
     createSendToken(req.user, HttpStatus.OK, req, res);
 });
 export default router;
-//# sourceMappingURL=authRoutes.js.map

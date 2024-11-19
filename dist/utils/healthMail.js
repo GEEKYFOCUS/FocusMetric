@@ -74,4 +74,3 @@ export default class HealthCheckMail {
         });
     }
 }
-//# sourceMappingURL=healthMail.js.map

@@ -11,10 +11,10 @@ import useragent from "useragent";
 import UAParser from "ua-parser-js";
 import { nanoid } from "nanoid";
 import geoip from "geoip-lite";
-import Url from "../models/urlShortnerModel";
-import catchAsync from "../utils/catchAsync";
-import { HttpStatus } from "../helpers/httpsStatus";
-import { generateQRCode } from "../middleware/qrcode";
+import Url from "../models/urlShortnerModel.js";
+import catchAsync from "../utils/catchAsync.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
+import { generateQRCode } from "../middleware/qrcode.js";
 export const createShortUrl = catchAsync((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const { originalUrl } = req.body;
     const baseUrl = process.env.BASE_URL;
@@ -149,4 +149,3 @@ export const getQRCodeForUrl = catchAsync((req, res) => __awaiter(void 0, void 0
         });
     }
 }));
-//# sourceMappingURL=urlController.js.map

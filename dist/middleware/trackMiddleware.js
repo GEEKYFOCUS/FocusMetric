@@ -3,4 +3,3 @@ export const trackMiddleware = (req, res, next) => {
     console.log(`Tracking visit from IP: ${req.ip}`);
     next();
 };
-//# sourceMappingURL=trackMiddleware.js.map

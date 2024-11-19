@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import mongoose from "mongoose";
-import catchAsync from "../utils/catchAsync";
-import { HttpStatus } from "../helpers/httpsStatus";
+import catchAsync from "../utils/catchAsync.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
 export const healthCheck = catchAsync((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const dbStatus = mongoose.connection.readyState === 1 ? "connected" : "disconnected";
@@ -36,4 +36,3 @@ export const healthCheck = catchAsync((req, res) => __awaiter(void 0, void 0, vo
         });
     }
 }));
-//# sourceMappingURL=healthController.js.map

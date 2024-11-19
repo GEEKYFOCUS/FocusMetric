@@ -164,4 +164,3 @@ export default User;
 //   this.passwordResetExpires = Date.now() + 10 * (60 * 1000);
 //   return resetToken;
 // };
-//# sourceMappingURL=userModel.js.map

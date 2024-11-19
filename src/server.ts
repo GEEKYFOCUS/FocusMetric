@@ -5,7 +5,7 @@ import path from "path";
 import cron from "node-cron";
 import axios from "axios";
 import { fileURLToPath } from "url";
-
+import HealthCheckMail from "./utils/healthMail.js";
 process.on("uncaughtException", (err: Error) => {
   console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
   console.log(err.name, err.message, err.stack);
@@ -14,8 +14,8 @@ process.on("uncaughtException", (err: Error) => {
 dotenv.config({
   path: "./config.env",
 });
-import app from "./app";
-import HealthCheckMail from "./utils/healthMail";
+
+import app from "./app.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -48,10 +48,18 @@ process.on("unhandledRejection", (err: Error) => {
   });
 });
 
+process.on("SIGTERM", () => {
+  console.log("SIGTERM received: closing app...");
+  server.close(() => {
+    console.log("Server closed");
+    process.exit(0);
+  });
+});
+
 console.log(process.env.NODE_ENV);
 const startCronJobs = () => {
   // Schedule a health check every 9:00 AM
-  cron.schedule("*/2 * * * *", async () => {
+  cron.schedule("* 8 * * *", async () => {
     console.log("Running scheduled health check...");
     try {
       // Replace with your app's actual URL and port

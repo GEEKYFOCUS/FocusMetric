@@ -57,4 +57,3 @@ export default Url;
 //   ],
 // });
 // export const Url = mongoose.model<IUrl>("Url", urlSchema);
-//# sourceMappingURL=urlShortnerModel.js.map

@@ -8,4 +8,3 @@
 //   getUsers(router);
 //   return router;
 // };
-//# sourceMappingURL=index.js.map

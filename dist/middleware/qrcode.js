@@ -8,8 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import QRCode from "qrcode";
-import AppError from "../utils/appError";
-import { HttpStatus } from "../helpers/httpsStatus";
+import AppError from "../utils/appError.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
 // Function to generate QR code based on URL
 export function generateQRCode(url) {
     return __awaiter(this, void 0, void 0, function* () {
@@ -23,4 +23,3 @@ export function generateQRCode(url) {
         }
     });
 }
-//# sourceMappingURL=qrcode.js.map

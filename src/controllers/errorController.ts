@@ -1,5 +1,5 @@
 import express from "express";
-import AppError from "../utils/appError";
+import AppError from "../utils/appError.js";
 
 interface ExtendedError extends Error {
   statusCode?: number;

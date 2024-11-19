@@ -9,11 +9,11 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 import jwt from "jsonwebtoken";
 import crypto from "crypto";
-import catchAsync from "../utils/catchAsync";
-import Email from "../utils/email";
-import User from "../models/userModel";
-import { HttpStatus } from "../helpers/httpsStatus";
-import AppError from "../utils/appError";
+import catchAsync from "../utils/catchAsync.js";
+import Email from "../utils/email.js";
+import User from "../models/userModel.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
+import AppError from "../utils/appError.js";
 const jwtVerify = (token, secret) => new Promise((resolve, reject) => {
     jwt.verify(token, secret, (err, decoded) => {
         if (err)
@@ -313,4 +313,3 @@ export function findUserById(id) {
         return User.findById(id);
     });
 }
-//# sourceMappingURL=authController.js.map

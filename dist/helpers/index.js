@@ -7,4 +7,3 @@ export const authentication = (password, salt) => {
         .update(SECRET)
         .digest("hex");
 };
-//# sourceMappingURL=index.js.map

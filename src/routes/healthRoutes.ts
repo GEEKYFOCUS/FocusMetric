@@ -81,8 +81,8 @@
 
 import express, { NextFunction, Request, Response } from "express";
 import mongoose from "mongoose";
-import { HttpStatus } from "../helpers/httpsStatus";
-import { healthCheck } from "../controllers/healthController";
+import { HttpStatus } from "../helpers/httpsStatus.js";
+import { healthCheck } from "../controllers/healthController.js";
 
 const router = express.Router();
 

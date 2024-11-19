@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 import passport from "passport";
 import { Strategy as GoogleStrategy } from "passport-google-oauth20";
 
-import { findOrCreateUser, findUserById } from "./controllers/authController";
+import { findOrCreateUser, findUserById } from "./controllers/authController.js";
 
 dotenv.config({
   path: "./config.env",

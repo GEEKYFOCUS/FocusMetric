@@ -1,4 +1,4 @@
-import AppError from "../utils/appError";
+import AppError from "../utils/appError.js";
 const handleCastErrorInDB = (err) => {
     const message = `Invalid ${err.path}: ${err.value}`;
     return new AppError(message, 400);
@@ -74,4 +74,3 @@ export default (error, req, res, next) => {
         sendErrorProd(err, req, res, next);
     }
 };
-//# sourceMappingURL=errorController.js.map

@@ -32,4 +32,3 @@
 // });
 // healthCheck.start();
 // export default healthCheck;
-//# sourceMappingURL=health.js.map

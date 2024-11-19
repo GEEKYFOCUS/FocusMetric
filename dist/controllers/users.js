@@ -7,7 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { getUsers } from "../db/user";
+import { getUsers } from "../db/user.js";
 export const getAllUser = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const users = yield getUsers();
@@ -20,4 +20,3 @@ export const getAllUser = (req, res) => __awaiter(void 0, void 0, void 0, functi
             .json({ error: "An error occurred while fetching users" });
     }
 });
-//# sourceMappingURL=users.js.map

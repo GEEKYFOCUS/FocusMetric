@@ -30,4 +30,3 @@
 // //  "exec": "node --loader ts-node/esm ./src/server.ts"
 // //  "exec": "ts-node --require ts-node/register --experimental-specifier-resolution=node ./src/server.ts"
 // // nodemon --exec node --no-warnings=ExperimentalWarning --loader ts-node/esm src/server.ts
-//# sourceMappingURL=index.js.map

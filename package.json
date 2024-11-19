@@ -5,11 +5,11 @@
   "main": "app.js",
   "scripts": {
     "start": "cross-env NODE_ENV=production nodemon",
-    "build": "tsc",
-    "watch": "tsc --watch",
+    "build": "tsc && copyfiles -u 1 src/**/*.pug dist",
+    "watch": "tsc && copyfiles -u 1 src/**/*.pug dist  --watch",
     "dev": " nodemon dist/server.js",
-    "start:prod": "cross-env  SET NODE_ENV=production nodemon dist/server.js",
-    "prod": "cross-env NODE_ENV=production nodemon dist/server.js"
+    "start:prod": "cross-env  NODE_ENV=production node dist/server.js",
+    "prod": "cross-env NODE_ENV=production node dist/server.js"
   },
   "author": "Geekyfocus",
   "license": "ISC",
@@ -75,6 +75,7 @@
     "@types/validator": "^13.12.2",
     "@typescript-eslint/eslint-plugin": "^8.14.0",
     "@typescript-eslint/parser": "^8.14.0",
+    "copyfiles": "^2.4.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
@@ -91,6 +92,6 @@
   "type": "module",
   "extends": "@tsconfig/node20/tsconfig.json",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=14.0.0 <=20.x"
   }
 }

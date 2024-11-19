@@ -14,4 +14,3 @@ export var HttpStatus;
     HttpStatus[HttpStatus["REQUEST_ENTITY_TOO_LARGE"] = 413] = "REQUEST_ENTITY_TOO_LARGE";
     HttpStatus[HttpStatus["SERVICE_UNAVAILABLE"] = 503] = "SERVICE_UNAVAILABLE";
 })(HttpStatus || (HttpStatus = {}));
-//# sourceMappingURL=httpsStatus.js.map

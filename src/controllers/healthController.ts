@@ -1,8 +1,8 @@
 import express, { Request, Response } from "express";
 import mongoose from "mongoose";
-import catchAsync from "../utils/catchAsync";
+import catchAsync from "../utils/catchAsync.js";
 import { AxiosResponseTransformer } from "axios";
-import { HttpStatus } from "../helpers/httpsStatus";
+import { HttpStatus } from "../helpers/httpsStatus.js";
 
 export const healthCheck = catchAsync(async (req: Request, res: Response) => {
   try {
@@ -26,7 +26,6 @@ export const healthCheck = catchAsync(async (req: Request, res: Response) => {
   } catch (error: any) {
     console.error("Health check failed", error);
 
-   
     // If something goes wrong, return 503
     return res.status(HttpStatus.SERVICE_UNAVAILABLE).json({
       app: "unhealthy",

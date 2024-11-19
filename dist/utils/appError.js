@@ -8,4 +8,3 @@ class AppError extends Error {
     }
 }
 export default AppError;
-//# sourceMappingURL=appError.js.map

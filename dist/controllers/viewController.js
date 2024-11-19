@@ -7,10 +7,9 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import catchAsync from "../utils/catchAsync";
+import catchAsync from "../utils/catchAsync.js";
 export const getOverView = catchAsync((req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     res.status(200).render("overview", {
         title: "Test Page",
     });
 }));
-//# sourceMappingURL=viewController.js.map

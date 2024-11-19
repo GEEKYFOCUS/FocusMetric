@@ -9,7 +9,7 @@ import {
   resendVerificationToken,
   protect,
   updatePassword,
-} from "../controllers/authController";
+} from "../controllers/authController.js";
 // const userController = require("../controllers/userController");
 const router = express.Router();
 
@@ -21,7 +21,7 @@ router.post("/resetPassword/:token", resetPassword);
 router.get("/verifyUser/:token", verifyUser);
 router.post("/resendVerificationToken", resendVerificationToken);
 
-// router.use(protect);
+// router.use(protect);.js
 
 router.patch("/updatePassword", updatePassword);
 

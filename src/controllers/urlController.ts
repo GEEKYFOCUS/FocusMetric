@@ -3,11 +3,11 @@ import useragent from "useragent";
 import UAParser from "ua-parser-js";
 import { nanoid } from "nanoid";
 import geoip from "geoip-lite";
-import Url from "../models/urlShortnerModel";
-import catchAsync from "../utils/catchAsync";
-import { IUser } from "../models/userModel";
-import { HttpStatus } from "../helpers/httpsStatus";
-import { generateQRCode } from "../middleware/qrcode";
+import Url from "../models/urlShortnerModel.js";
+import catchAsync from "../utils/catchAsync.js";
+import { IUser } from "../models/userModel.js";
+import { HttpStatus } from "../helpers/httpsStatus.js";
+import { generateQRCode } from "../middleware/qrcode.js";
 // import { originAgentCluster } from "helmet";
 interface ProtectedUserRequest extends Request {
   user?: IUser;

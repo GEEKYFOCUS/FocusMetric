@@ -8,7 +8,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 import pkg from "lodash";
-import { getUserBySessionToken } from "../db/user";
+import { getUserBySessionToken } from "../db/user.js";
 const { merge, get } = pkg;
 export const isOwner = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     const { id } = req.params;
@@ -36,4 +36,3 @@ export const isAuthenticated = (req, res, next) => __awaiter(void 0, void 0, voi
         return res.status(401);
     }
 });
-//# sourceMappingURL=index.js.map
