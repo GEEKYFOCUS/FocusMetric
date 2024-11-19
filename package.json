@@ -8,8 +8,7 @@
     "build": "tsc",
     "watch": "tsc --watch",
     "dev": " nodemon dist/server.js",
-    "prod": "cross-env NODE_ENV=production nodemon dist/server.js",
-    "prod-render": "cross-env  SET NODE_ENV=production&nodemon dist/server.js"
+    "start:prod": "cross-env  SET NODE_ENV=production&nodemon dist/server.js"
   },
   "author": "Geekyfocus",
   "license": "ISC",
