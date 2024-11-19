@@ -78,7 +78,7 @@ process.on("SIGTERM", () => {
 console.log(process.env.NODE_ENV);
 const startCronJobs = () => {
   // Schedule a health check every 9:00 AM
-  cron.schedule("*/2 * * * *", () =>
+  cron.schedule("0 8 * * *", () =>
     __awaiter(void 0, void 0, void 0, function* () {
       console.log("Running scheduled health check...");
       try {
