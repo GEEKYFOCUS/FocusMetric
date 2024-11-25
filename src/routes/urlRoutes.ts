@@ -16,7 +16,6 @@ router.post("/short/shorten", protect, createShortUrl);
 
 router.get(
   "/short/:shortCode",
-  protect,
   trackMiddleware,
   handleRedirectToOriginalUrl
 );
