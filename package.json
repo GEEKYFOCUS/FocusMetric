@@ -4,11 +4,11 @@
   "description": "An API that allows user to get better analytics of thier url Link",
   "main": "app.js",
   "scripts": {
-    "start": "cross-env NODE_ENV=production nodemon",
-    "build": "tsc && copyfiles -u 1 src/**/*.pug dist",
+    "start": "node init && cross-env NODE_ENV=production nodemon",
+    "build": "node init && tsc && copyfiles -u 1 src/**/*.pug dist",
     "watch": "tsc && copyfiles -u 1 src/**/*.pug dist  --watch",
-    "dev": " nodemon dist/server.js",
-    "start:prod": "cross-env  NODE_ENV=production node dist/server.js",
+    "dev": "node init &&  nodemon dist/server.js",
+    "start:prod": "node init && cross-env  NODE_ENV=production node dist/server.js",
     "prod": "cross-env NODE_ENV=production node dist/server.js"
   },
   "author": "Geekyfocus",
